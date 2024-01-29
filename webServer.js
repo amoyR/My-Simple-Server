@@ -6,6 +6,7 @@ export class WebServer {
   constructor() {
     const require = createRequire(import.meta.url);
     this.net = require("net")
+    this.fs = require('fs');
     const config = require('config')
     this.basePath = config.server.base
     this.portNum = config.server.port
@@ -17,6 +18,7 @@ export class WebServer {
       socket.on("data", data => {
         const reqLine = this.extractRequestLine(data)
         const response = this.createResponse(reqLine)
+        this.outputAccessLog(socket.remoteAddress, data)
 
         socket.write(response['head'])
         socket.write(response['body'])
@@ -33,5 +35,10 @@ export class WebServer {
   createResponse (reqLine) {
     const repose = new Response(this.basePath)
     return repose.createResMsg(reqLine) 
+  }
+
+  outputAccessLog (address, reqMsg) {
+    const log = `address: ${address}\nrequest: ${reqMsg}\n`
+    this.fs.writeFileSync(this.basePath + '/logs/access.log', log, { flag: 'a' })
   }
 }
