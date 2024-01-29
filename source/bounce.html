@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+  <meta charset="utf-8"/>
+ </head>
+ <style>
+  #v {
+    text-align: right
+  }
+ </style>
+ <body>
+  <canvas id="canvas" width="825" height="600"></canvas>
+  
+  <div>
+  <input type = "button" id = "start" value = "start" onclick = "startAnimation()"/>
+  </div>
+
+  <form id = "objectType">  
+  <input type="radio" name = "draw" id = "Ball" value = "ball" onchange = "setAnimationTarget()" checked> Ball 
+  <input type="radio" name = "draw" id = "Triangle" value = "triangle" onchange = "setAnimationTarget()" > Triangle 
+  <input type="radio" name = "draw" id = "Rectangle" value = "rectangle" onchange = "setAnimationTarget()" > Rectangle
+  <input type="radio" name = "draw" id = "Character" value = "text" onchange = "setAnimationTarget()" > Text 
+  <input type="radio" name = "draw" id = "Picture" value = "picture" onchange = "setAnimationTarget()"> Picture 
+  </form>
+
+  <form id = "colorType">    <input type="radio" name="color" value= "red" id = "colorRadioR" onchange = "setAnimationTarget()" checked> Red 
+  <input type="radio" name="color" value = "green" id = "colorRadioG" onchange = "setAnimationTarget()" > Green
+  <input type="radio" name="color" value = "blue" id = "colorRadioB" onchange = "setAnimationTarget()"> Blue
+  </form>
+  
+
+  <script type="text/javascript" src="bouncingAnimation.js"></script>
+ </body>
+</html>
+

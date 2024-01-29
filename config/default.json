@@ -1,0 +1,6 @@
+{
+  "server": {
+    "base": "/xxxx/yyyy/zz/SimpleServer",
+    "port": 8888
+  }
+}

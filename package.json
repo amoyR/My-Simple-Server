@@ -1,0 +1,15 @@
+{
+  "name": "simpleserver",
+  "version": "1.0.0",
+  "description": "I implement a simple http server from scratch. The http sever processes GET method. I write the http server program while reading RFC. Then I found 3 ways to judge an end of a response. Firstly, a connection between a server and a client closed. Secondly, the server specifies the size of the message body in the Content-Length header. Thirdly, in chunk transfer The chunked encoding is ended by any chunk whose size is 0. I learned a lot from that.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.10"
+  }
+}

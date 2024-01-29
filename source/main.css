@@ -1,0 +1,46 @@
+body {
+ background-color: #000000;
+ color: #FFFFFF;
+}
+h1 {
+  font-size: 40px;
+  margin: 20px 0px 20px 0px;
+  position: relative;
+}
+
+h1::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%; /* 位置調整 */
+  transform: translate(-50%); /* 位置調整 */
+  bottom: -10px; /* 下線の上下位置調整 */
+  width: 30px; /* 下線の幅 */
+  height: 3px; /* 下線の太さ */
+  background-color: #00FFFF; /* 下線の色 */
+}
+
+
+.profile {
+  font-size: 20px;
+  margin: 20px;
+  margin-left: 57%;
+}
+
+.basicInfo {
+  margin-left: 57%;
+
+}
+h1::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%; /* 位置調整 */
+  transform: translate(-50%); /* 位置調整 */
+  bottom: -10px; /* 下線の上下位置調整 */
+  width: 30px; /* 下線の幅 */
+  height: 2px; /* 下線の太さ */
+  background-color: #666666; /* 下線の色 */
+}
+
+
