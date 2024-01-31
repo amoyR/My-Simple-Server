@@ -1,4 +1,4 @@
-import { createRequire } from 'module';
+import { createRequire } from 'module'
 
 export class Response {
   constructor (basePath) {
@@ -24,8 +24,8 @@ export class Response {
   httpGet (path) {
     const filePath = this.basePath + path
     const extension = this.identifyExtension(path)
-    const require = createRequire(import.meta.url);
-    const fs = require('fs');
+    const require = createRequire(import.meta.url)
+    const fs = require('fs')
 
     if (filePath.indexOf("..") != -1) {
       this.returnClientError(403)
@@ -80,23 +80,23 @@ export class Response {
     let contentType = "text/plain"
     switch (extension) {
       case "html":
-        contentType = "text/html";
-        break;
+        contentType = "text/html"
+        break
       case "css":
-        contentType = "text/css";
-        break;
+        contentType = "text/css"
+        break
       case "js":
-        contentType = "application/javascript";
-        break;
+        contentType = "application/javascript"
+        break
       case "jpeg":
-        contentType = "image/jpeg";
-        break;
+        contentType = "image/jpeg"
+        break
       case "png":
-        contentType = "image/png";
-        break;
+        contentType = "image/png"
+        break
       case "bmp":
-        contentType = "image/bmp";
-        break;
+        contentType = "image/bmp"
+        break
     }
     return contentType
   }

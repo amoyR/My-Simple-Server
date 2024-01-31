@@ -1,12 +1,12 @@
-import { createRequire } from 'module';
+import { createRequire } from 'module'
 import {Request} from './request.js'
 import {Response} from './response.js'
 
 export class WebServer {
   constructor() {
-    const require = createRequire(import.meta.url);
+    const require = createRequire(import.meta.url)
     this.net = require("net")
-    this.fs = require('fs');
+    this.fs = require('fs')
     const config = require('config')
     this.basePath = config.server.base
     this.portNum = config.server.port
